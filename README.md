@@ -34,18 +34,19 @@ Para executar o projeto em outro computador, siga os passos abaixo:
    cd email
    docker-compose up -d
    cd ../
-
+   ```
    ```bash
    cd product
    docker-compose up -d
    cd ../
-   
+   ```
    ```bash
    cd store
    docker-compose up -d
    cd ../
-
+   ```
    ```bash
    cd user
    docker-compose up -d
    cd ../
+   ```
