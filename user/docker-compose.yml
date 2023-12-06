@@ -1,0 +1,16 @@
+version: '3'
+services:
+  user-postgres:
+    image: postgres:latest
+    container_name: user-postgres-container
+    ports:
+      - "5432:5432" # porta original
+      - "5433:5432" # porta alternativa para acesso externo
+    environment:
+      POSTGRES_DB: db_user
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+    volumes:
+      - user-postgres-data:/var/lib/postgresql/data
+volumes:
+  user-postgres-data:

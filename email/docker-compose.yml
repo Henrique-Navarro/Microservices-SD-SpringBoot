@@ -1,0 +1,15 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:latest
+    container_name: email-postgres-container
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_DB: db_email
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+    volumes:
+      - email-postgres-data:/var/lib/postgresql/data
+volumes:
+  email-postgres-data:

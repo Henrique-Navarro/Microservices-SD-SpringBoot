@@ -1,0 +1,15 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:latest
+    container_name: product-postgres-container
+    ports:
+      - "5436:5432"
+    environment:
+      POSTGRES_DB: db_product
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+    volumes:
+      - product-postgres-data:/var/lib/postgresql/data
+volumes:
+  product-postgres-data:
