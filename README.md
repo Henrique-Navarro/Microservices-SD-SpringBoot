@@ -20,13 +20,32 @@ Para executar o projeto em outro computador, siga os passos abaixo:
 ### Pré-requisitos
 
 - Certifique-se de ter o Docker instalado no seu computador.
+- Tenha o Spring Boot e Java instalados em seu ambiente de desenvolvimento.
 
 ### Passos
 
 1. Clone este repositório para o seu computador.
+   ```bash
+   git clone https://github.com/Henrique-Navarro/Microservices-SD-SpringBoot.git
 2. Abra um terminal e navegue até o diretório raiz do projeto.
 3. Para cada um dos microsserviços, execute os seguintes comandos:
 
    ```bash
-   cd nome_do_microservico
+   cd email
    docker-compose up -d
+   cd ../
+
+   ```bash
+   cd product
+   docker-compose up -d
+   cd ../
+   
+   ```bash
+   cd store
+   docker-compose up -d
+   cd ../
+
+   ```bash
+   cd user
+   docker-compose up -d
+   cd ../
